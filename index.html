@@ -5,91 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EasterEgg (EGG) — Meme Coin on BSC</title>
   <meta name="description" content="EasterEgg (EGG) — a community‑driven meme coin on BNB Smart Chain. Buy, chart, whitepaper and proof links in one clean page." />
-  <link rel="canonical" href="https://www.easteregg.ai/" />
+  <link rel="canonical" href="https://www.easteregg.pro/" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="EasterEgg (EGG) — Meme Coin on BSC" />
   <meta property="og:description" content="Join the EasterEgg community. Contract, chart, whitepaper, and proof links." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.easteregg.ai/" />
+  <meta property="og:url" content="https://www.easteregg.pro/" />
   <meta property="og:image" content="/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon (inline egg) -->
+  <!-- Favicon (inline egg; will be overridden if /logo.png exists) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='34' rx='18' ry='26' fill='%23E30B5D'/%3E%3C/svg%3E" />
 
-  <!-- Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --brand:#E30B5D; /* Raspberry accent */
+      --brand:#E30B5D; /* Raspberry */
+      --brand-2:#ff6aa2; /* Lighter */
       --bg:#0c0b11;    /* Page bg */
       --ink:#f6f7fb;   /* Text */
       --muted:#c7c9d7; /* Muted text */
-      --card:#131427;  /* Card bg */
-      --edge:rgba(255,255,255,.09);
+      --card:#121327;  /* Card bg */
+      --edge:rgba(255,255,255,.08);
       --ring:rgba(227,11,93,.35);
+      --success:#2de3a3;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);
       background:
-        radial-gradient(900px 500px at 100% -10%, rgba(227,11,93,.18), transparent 60%),
-        radial-gradient(800px 500px at -10% 0%, rgba(227,11,93,.12), transparent 60%),
+        radial-gradient(1000px 600px at 110% -10%, rgba(227,11,93,.18), transparent 60%),
+        radial-gradient(800px 500px at -10% -10%, rgba(227,11,93,.12), transparent 60%),
         linear-gradient(180deg,#0c0b11 0%, #17162a 100%);
     }
     a{color:var(--ink);text-decoration:none}
-    .container{width:min(1120px,92%);margin-inline:auto}
+    .container{width:min(1180px,92%);margin-inline:auto}
 
     /* NAV */
-    .nav{position:sticky;top:0;z-index:30;background:rgba(15,15,29,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
-    .nav-in{display:flex;align-items:center;gap:16px;padding:10px 0}
-    .logo{display:flex;align-items:center;gap:.6rem;font-weight:900;font-size:1.05rem}
-    .logo .egg{width:26px;height:26px;border-radius:50%;background:var(--brand);box-shadow:inset 0 -6px 12px rgba(0,0,0,.25)}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(13,13,26,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
+    .nav-in{display:flex;align-items:center;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:900}
+    .brand-logo{width:28px;height:28px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px rgba(227,11,93,.25)}
+    .brand-text{font-family:Space Grotesk,system-ui,sans-serif;letter-spacing:.3px}
     .sp{flex:1}
-    .nav a{padding:.45rem .7rem;border-radius:10px;border:1px solid transparent}
+    .nav a{padding:.48rem .8rem;border-radius:12px;border:1px solid transparent}
     .nav a:hover{border-color:var(--edge)}
-    .buybtn{background:linear-gradient(135deg,var(--brand),#ff6aa2);border:0;color:white}
+    .buybtn{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:white}
 
     /* HERO */
-    .hero{padding:40px 0 24px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:center}
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
-    .headline{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.03;margin:.4rem 0}
+    .hero{padding:44px 0 20px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center}
+    @media (max-width:950px){.hero-grid{grid-template-columns:1fr}}
+    .headline{font-family:Space Grotesk,system-ui,sans-serif;font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;line-height:1.05;margin:.4rem 0}
     .sub{color:var(--muted)}
     .cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1rem;border-radius:14px;border:1px solid var(--edge);background:#1a1a2a;transition:.15s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),#ff6aa2);border-color:transparent;color:white}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.05rem;border-radius:14px;border:1px solid var(--edge);background:#1a1a2a;transition:transform .15s, box-shadow .2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;color:white}
 
-    /* Address box */
-    .addrbox{display:flex;gap:.6rem;align-items:center;background:#0f0f1d;border:1px solid var(--edge);padding:10px 12px;border-radius:14px;width:100%;max-width:720px}
+    /* Address box (glass) */
+    .addrbox{display:flex;gap:.6rem;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--edge);padding:10px 12px;border-radius:16px;width:100%;max-width:780px}
     .addrbox code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
 
     /* Art */
     .art{position:relative;aspect-ratio:1/1;max-width:520px;justify-self:center}
     .art .bubble{position:absolute;right:10%;top:8%;background:white;color:#222;padding:.5rem .7rem;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.4);font-weight:800}
 
-    /* SECTIONS */
-    .section{padding:44px 0}
-    .section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);text-align:center;margin:0 0 14px}
+    /* Sections */
+    .section{padding:56px 0}
+    .section h2{font-family:Space Grotesk,system-ui,sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);text-align:center;margin:0 0 14px}
+    .lead{max-width:72ch;margin:0 auto 16px;color:var(--muted);text-align:center}
 
-    /* Partners grid */
-    .partners{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+    /* Chips + cards */
+    .proofs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+    .proofs a{display:inline-flex;align-items:center;padding:.65rem .9rem;border-radius:12px;border:1px solid var(--edge);background:#191a2d}
+
+    .partners{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:18px}
     @media (max-width:1000px){.partners{grid-template-columns:repeat(4,1fr)}}
     @media (max-width:700px){.partners{grid-template-columns:repeat(3,1fr)}}
     .pitem{height:66px;border-radius:14px;background:#14142a;border:1px solid var(--edge);display:flex;align-items:center;justify-content:center;font-weight:600;color:#98a}
 
-    /* Proof tag pills */
-    .proofs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
-    .proofs a{display:inline-flex;align-items:center;padding:.6rem .85rem;border-radius:12px;border:1px solid var(--edge);background:#191a2d}
+    /* Tokenomics */
+    .tok-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+    @media (max-width:900px){.tok-grid{grid-template-columns:repeat(2,1fr)}}
+    .tok{background:#14142a;border:1px solid var(--edge);border-radius:16px;padding:16px;text-align:center}
+    .tok .pct{font-size:1.8rem;font-weight:800}
+
+    .donut{--p1:45;--p2:30;--p3:15;--p4:10;width:180px;height:180px;margin:10px auto;border-radius:50%;background:
+      conic-gradient(var(--brand) 0 calc(var(--p1)*1%), #7cd0ff 0 calc((var(--p1)+var(--p2))*1%), #ffd36f 0 calc((var(--p1)+var(--p2)+var(--p3))*1%), #9f8cff 0 100%);
+      box-shadow:inset 0 0 0 28px #0f0f1d,inset 0 0 0 29px var(--edge);
+    }
+
+    /* Roadmap */
+    .road{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:1000px){.road{grid-template-columns:1fr}}
+    .mile{background:#14142a;border:1px solid var(--edge);border-radius:16px;padding:18px}
 
     /* Footer */
     .footer{padding:28px 0;border-top:1px solid var(--edge);color:#a9abb9}
     .icons{display:flex;gap:.5rem}
     .iconbtn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;border:1px solid var(--edge);background:#18182a}
+
+    /* Floating CTA */
+    .float-cta{position:fixed;right:18px;bottom:18px;z-index:50}
+
     .center{text-align:center}
   </style>
 </head>
@@ -97,10 +120,14 @@
   <!-- NAV -->
   <header class="nav">
     <div class="container nav-in">
-      <a class="logo" href="#home" aria-label="EasterEgg home"><span class="egg"></span><span>EasterEgg</span></a>
+      <a class="brand" href="#home" aria-label="EasterEgg home">
+        <img class="brand-logo" src="/logo.png" alt="EasterEgg" onerror="this.style.display='none'">
+        <span class="brand-text">EasterEgg</span>
+      </a>
       <div class="sp"></div>
       <a href="#welcome">About</a>
       <a href="#partners">Partners</a>
+      <a href="#tokenomics">Tokenomics</a>
       <a id="wp-link" href="https://your-whitepaper.gitbook.io" target="_blank" rel="noopener">Whitepaper</a>
       <a class="buybtn" href="#how-to-buy">Buy</a>
     </div>
@@ -110,7 +137,7 @@
   <section id="home" class="hero container">
     <div class="hero-grid">
       <div>
-        <h1 class="headline">Join the EasterEgg Meme Revolution</h1>
+        <h1 class="headline">Join the<br>EasterEgg Meme<br>Revolution</h1>
         <p class="sub">Community‑driven ★★★★★ <span aria-hidden="true">⭐️⭐️⭐️⭐️⭐️</span></p>
 
         <!-- Address row -->
@@ -155,10 +182,10 @@
     </div>
   </section>
 
-  <!-- WELCOME / ABOUT -->
+  <!-- ABOUT -->
   <section id="welcome" class="section container">
     <h2>Welcome to the EasterEgg Community</h2>
-    <p class="center sub" style="max-width:72ch;margin-inline:auto">EasterEgg is a light‑hearted, community‑first meme coin on BSC. We focus on clean transparency and verifiable links: contract on BscScan, LP lock, renounce, and a live chart. Nothing is promised; DYOR and enjoy the memes.</p>
+    <p class="lead">EasterEgg is a light‑hearted, community‑first meme coin on BSC. We focus on clean transparency and verifiable links: contract on BscScan, LP lock, renounce, and a live chart. Nothing is promised; DYOR and enjoy the memes.</p>
 
     <div class="proofs" style="margin-top:14px">
       <a id="proof-ca" href="https://bscscan.com/token/0xYOUR_CONTRACT_ADDRESS#code" target="_blank" rel="noopener">Contract</a>
@@ -170,31 +197,56 @@
   <!-- PARTNERS -->
   <section id="partners" class="section container">
     <h2>Partners</h2>
-    <div class="partners" style="margin-top:12px">
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
-      <a class="pitem" href="#" aria-label="Partner">Partner</a>
+    <div class="partners">
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+    </div>
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section id="tokenomics" class="section container">
+    <h2>Tokenomics</h2>
+    <p class="lead">Default example values — change to your real numbers.</p>
+
+    <div class="donut" title="Distribution donut uses CSS conic‑gradient"></div>
+
+    <div class="tok-grid">
+      <div class="tok"><div class="pct">45%</div><div>Liquidity</div></div>
+      <div class="tok"><div class="pct">30%</div><div>Community</div></div>
+      <div class="tok"><div class="pct">15%</div><div>Marketing</div></div>
+      <div class="tok"><div class="pct">10%</div><div>Reserve</div></div>
     </div>
   </section>
 
   <!-- HOW TO BUY -->
   <section id="how-to-buy" class="section container">
     <h2>How to Buy</h2>
-    <ol class="sub" style="max-width:70ch;margin-inline:auto;line-height:1.7">
+    <ol class="lead" style="max-width:70ch;text-align:left;line-height:1.75">
       <li>Install <b>MetaMask</b> (or Trust Wallet) and select <b>BNB Smart Chain</b>.</li>
       <li>Fund with a small amount of <b>BNB</b> for gas.</li>
       <li>Open <b>PancakeSwap</b> and paste our contract <code>0xYOUR_CONTRACT_ADDRESS</code>. If price impact blocks, enable <b>V2</b> and use a small <b>slippage</b> (1–3%).</li>
       <li>Confirm the swap. Add EGG as a custom token with the same contract to see your balance.</li>
     </ol>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section container">
+    <h2>Roadmap</h2>
+    <div class="road" style="margin-top:14px">
+      <div class="mile"><b>Phase 1:</b> Launch, socials, LP lock, renounce, website, CMC/CGK submissions.</div>
+      <div class="mile"><b>Phase 2:</b> Community contests, partner memes, sticker pack, first CEX applications.</div>
+      <div class="mile"><b>Phase 3:</b> Ecosystem utility experiments, integrations, bigger collabs.</div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -208,6 +260,9 @@
       <div>© <span id="yr"></span> EasterEgg. All rights reserved. | <a href="#welcome">Disclaimer</a></div>
     </div>
   </footer>
+
+  <!-- Floating BUY -->
+  <div class="float-cta"><a class="btn primary" id="buy-float" href="https://pancakeswap.finance/swap?outputCurrency=0xYOUR_CONTRACT_ADDRESS" target="_blank" rel="noopener">BUY $EGG</a></div>
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
@@ -243,6 +298,7 @@
         document.getElementById('addr').textContent=addr;
         document.getElementById('scan-link').href=`https://bscscan.com/token/${addr}`;
         document.getElementById('buy-link').href=`https://pancakeswap.finance/swap?outputCurrency=${addr}`;
+        document.getElementById('buy-float').href=`https://pancakeswap.finance/swap?outputCurrency=${addr}`;
         document.getElementById('proof-ca').href=`https://bscscan.com/token/${addr}#code`;
       }
       if(pair){
