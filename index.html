@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EasterEgg (EGG) — Meme Coin on BSC</title>
+  <meta name="description" content="EasterEgg (EGG) — community-driven meme coin on BNB Smart Chain. Buy, chart, whitepaper, and partners in one clean page." />
+
+  <!-- SEO/OG -->
+  <meta property="og:title" content="EasterEgg (EGG) — Meme Coin on BSC" />
+  <meta property="og:description" content="Join the EasterEgg community. Contract, chart, whitepaper, and proof links." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='32' cy='34' rx='18' ry='26' fill='%23E30B5D'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --brand:#E30B5D; /* raspberry accent */
+      --bg:#0c0b11;    /* page bg */
+      --ink:#f6f7fb;   /* text */
+      --muted:#c7c9d7; /* muted text */
+      --card:#131427;  /* card bg */
+      --edge:rgba(255,255,255,.09);
+      --ring:rgba(227,11,93,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);
+      background:
+        radial-gradient(900px 500px at 100% -10%, rgba(227,11,93,.18), transparent 60%),
+        radial-gradient(800px 500px at -10% 0%, rgba(227,11,93,.12), transparent 60%),
+        linear-gradient(180deg,#0c0b11 0%, #17162a 100%);
+    }
+    a{color:var(--ink);text-decoration:none}
+    .container{width:min(1120px,92%);margin-inline:auto}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:30;background:rgba(15,15,29,.75);backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--edge)}
+    .nav-in{display:flex;align-items:center;gap:16px;padding:10px 0}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:900;font-size:1.05rem}
+    .logo .egg{width:26px;height:26px;border-radius:50%;background:var(--brand);box-shadow:inset 0 -6px 12px rgba(0,0,0,.25)}
+    .sp{flex:1}
+    .nav a{padding:.45rem .7rem;border-radius:10px;border:1px solid transparent}
+    .nav a:hover{border-color:var(--edge)}
+    .buybtn{background:linear-gradient(135deg,var(--brand),#ff6aa2);border:0;color:white}
+
+    /* HERO */
+    .hero{padding:40px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:center}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    .headline{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.03;margin:.4rem 0}
+    .sub{color:var(--muted)}
+    .cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1rem;border-radius:14px;border:1px solid var(--edge);background:#1a1a2a;transition:.15s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#ff6aa2);border-color:transparent;color:white}
+    .rating{display:inline-flex;gap:.15rem;margin-left:.3rem;vertical-align:middle}
+
+    /* Address box */
+    .addrbox{display:flex;gap:.6rem;align-items:center;background:#0f0f1d;border:1px solid var(--edge);padding:10px 12px;border-radius:14px;width:100%;max-width:620px}
+    .addrbox code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+
+    /* Art */
+    .art{position:relative;aspect-ratio:1/1;max-width:520px;justify-self:center}
+    .art .bubble{position:absolute;right:10%;top:8%;background:white;color:#222;padding:.5rem .7rem;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.4);font-weight:800}
+
+    /* SECTIONS */
+    .section{padding:44px 0}
+    .section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);text-align:center;margin:0 0 14px}
+
+    /* Partners grid */
+    .partners{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+    @media (max-width:1000px){.partners{grid-template-columns:repeat(4,1fr)}}
+    @media (max-width:700px){.partners{grid-template-columns:repeat(3,1fr)}}
+    .pitem{height:66px;border-radius:14px;background:#14142a;border:1px solid var(--edge);display:flex;align-items:center;justify-content:center;font-weight:600;color:#98a}
+
+    /* Footer */
+    .footer{padding:28px 0;border-top:1px solid var(--edge);color:#a9abb9}
+    .icons{display:flex;gap:.5rem}
+    .iconbtn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;border:1px solid var(--edge);background:#18182a}
+
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-in">
+      <div class="logo"><span class="egg"></span><span>EasterEgg</span></div>
+      <div class="sp"></div>
+      <a href="#home">Home</a>
+      <a href="#welcome">About</a>
+      <a href="#partners">Partners</a>
+      <a href="https://baby-4-1.gitbook.io" target="_blank" rel="noopener">Whitepaper</a>
+      <a class="buybtn" href="#how-to-buy">Buy</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero container">
+    <div class="hero-grid">
+      <div>
+        <h1 class="headline">Join the EasterEgg Meme Revolution</h1>
+        <p class="sub">Community‑driven ★★★★★ <span class="rating">⭐️⭐️⭐️⭐️⭐️</span></p>
+        <div class="addrbox" style="margin:12px 0 10px">
+          <span class="sub" style="font-weight:600;letter-spacing:.06em">CA</span>
+          <code id="addr">0xYOUR_CONTRACT_ADDRESS</code>
+          <a class="btn" id="scan-link" target="_blank" rel="noopener" href="https://bscscan.com/token/0xYOUR_CONTRACT_ADDRESS">BscScan</a>
+          <button class="btn" onclick="copyAddr()">Copy</button>
+        </div>
+        <div class="cta">
+          <a class="btn primary" id="buy-link" href="https://pancakeswap.finance/swap?outputCurrency=0xYOUR_CONTRACT_ADDRESS" target="_blank" rel="noopener">BUY</a>
+          <a class="btn" id="chart-link" href="https://dexscreener.com/bsc/PAIRS_PLACEHOLDER" target="_blank" rel="noopener">CHART</a>
+          <a class="btn" id="wp-link" href="https://your-whitepaper.gitbook.io" target="_blank" rel="noopener">Whitepaper</a>
+        </div>
+      </div>
+      <div class="art">
+        <div class="bubble">such egg. much hatch.</div>
+        <!-- Egg art -->
+        <svg viewBox="0 0 600 600" width="100%" height="100%" aria-hidden="true">
+          <defs>
+            <radialGradient id="eggFill" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#ffe8c7" />
+              <stop offset="100%" stop-color="#ffc98e" />
+            </radialGradient>
+            <linearGradient id="glow" x1="0" x2="1">
+              <stop offset="0%" stop-color="#E30B5D" />
+              <stop offset="100%" stop-color="#ff7aa8" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="300" cy="500" rx="210" ry="55" fill="rgba(0,0,0,.35)" />
+          <ellipse cx="300" cy="280" rx="170" ry="220" fill="url(#eggFill)" stroke="#2b1a10" stroke-opacity=".08" stroke-width="6"/>
+          <path d="M150 320 L210 300 L240 330 L280 300 L320 335 L360 305 L390 325" fill="none" stroke="#d08d55" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="120" cy="120" r="10" fill="url(#glow)" />
+          <circle cx="470" cy="90" r="6" fill="url(#glow)" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WELCOME / ABOUT -->
+  <section id="welcome" class="section container">
+    <h2>Welcome to the EasterEgg Community</h2>
+    <p class="center sub" style="max-width:70ch;margin-inline:auto">Discover the fun and creative world of EasterEgg — a BSC meme coin hatched by the community. We focus on clean transparency and verifiable links: contract on BscScan, LP lock, renounce, and live chart. Nothing is promised; DYOR and enjoy the memes.</p>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners" class="section container">
+    <h2>Partners</h2>
+    <div class="partners" style="margin-top:12px">
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+      <a class="pitem" href="#">Partner</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="icons">
+        <a class="iconbtn" aria-label="X" href="https://x.com/YOUR_X_HANDLE" target="_blank" rel="noopener">X</a>
+        <a class="iconbtn" aria-label="Telegram" href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener">TG</a>
+      </div>
+      <div class="sp"></div>
+      <div>© <span id="yr"></span> EasterEgg. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    function copyAddr(){
+      const txt=document.getElementById('addr').textContent.trim();
+      navigator.clipboard.writeText(txt).then(()=>{
+        const b=document.querySelector('.addrbox button');
+        const prev=b.textContent;b.textContent='Copied!';
+        b.style.boxShadow='0 0 0 10px var(--ring)';
+        setTimeout(()=>{b.textContent=prev;b.style.boxShadow='0 0 0 0 transparent'},900);
+      });
+    }
+    // Optional QS: ?addr=0x...&pair=0x...&wp=https://...
+    (function(){
+      const qs=new URLSearchParams(location.search);
+      const addr=qs.get('addr');
+      const pair=qs.get('pair');
+      const wp=qs.get('wp');
+      if(addr){
+        document.getElementById('addr').textContent=addr;
+        document.getElementById('scan-link').href=`https://bscscan.com/token/${addr}`;
+        document.getElementById('buy-link').href=`https://pancakeswap.finance/swap?outputCurrency=${addr}`;
+      }
+      if(pair){
+        document.getElementById('chart-link').href=`https://dexscreener.com/bsc/${pair}`;
+      }
+      if(wp){
+        document.getElementById('wp-link').href=wp;
+      }
+    })();
+  </script>
+</body>
+</html>
